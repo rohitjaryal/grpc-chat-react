@@ -69,3 +69,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # grpc-chat-react
+
+
+Issues:>>
+
+https://daily.dev/blog/build-a-chat-app-using-grpc-and-reactjs
+
+protoc -I=. src/chat.proto --js_out=import_style=commonjs,binary:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
+
+run a docker file
+docker build -t grpc-web-react .
+docker run -d --name grpc-web-react -p 8080:8080 -p 9901:9901 grpc-web-react
+
+1. Downgrade nodejs version to v16 (currently using v16.20.2)
+2. https://github.com/grpc/grpc-web/issues/1220
